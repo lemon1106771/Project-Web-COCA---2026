@@ -1,1 +1,1 @@
-# Project-Web-COCA---2026
+A simple HTML Blog I made for a small project in my club

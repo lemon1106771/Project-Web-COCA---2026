@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f6fbfb;
+  color: #222;
+  line-height: 1.6;
+}
+
+header, main, footer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* only the home page uses two columns */
+.blog-layout {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+/* nav list */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display:flex;
+  gap: 10px
+}
+
+.nav-list a {
+  padding: 6px 12px;
+  background: #eaf6f6;
+  border: 1px solid #cceeee;
+  text-decoration: none;
+  color: #1aa6a6;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  background: #1aa6a6;
+  color: white;
+}
+
+/* blog layout */
+section {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  background: #eaf6f6;
+  padding: 12px;
+  border: 1px solid #cceeee;
+}
+
+/* single column pages */
+.single {
+  width: 100%;
+}
+
+/* posts */
+article {
+  background: white;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.post-image {
+  width: 250px;
+  float: left;
+  margin: 0 15px 10px 0;
+  border: 1px solid #ccc;
+}
+
+/* gallery */
+.gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.gallery figure {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 280px;
+  margin: 0;
+  text-align: center;
+}
+
+.gallery figure img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* crops nicely */
+  display: block;
+  border: 1px solid #ccc;
+}
+
+/* form */
+input, textarea {
+  width: 100%;
+  padding: 6px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .post-image {
+    float: none;
+    display: block;
+    margin: 0 auto 10px;
+  }
+}
