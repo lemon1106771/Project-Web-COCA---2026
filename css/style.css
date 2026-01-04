@@ -16,6 +16,17 @@ header, main, footer {
   padding: 16px;
 }
 
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chibi-miku {
+  width: 36px;
+  height: auto;
+}
+
 /* only the home page uses two columns */
 .blog-layout {
   display: flex;
@@ -148,10 +159,8 @@ input, textarea {
     display: block;
     margin: 0 auto 10px;
   }
-}
 /*fixing navbar to make it more mobile friendly, part of this was done by AI since 
   the author have spent quite some time fixing this and no result */
-@media (max-width: 768px) {
   .nav-list {
     flex-wrap: nowrap;        
     overflow-x: auto;        
@@ -166,8 +175,17 @@ input, textarea {
     font-size: 15px;
     padding: 8px 10px;
   }
+  
+  .chibi-miku {
+    width: 28px;
+  }
 }
-
+/*form confirmation message*/
+.form-message {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #1aa6a6;
+}
 /* dark mode */
 .dark {
   background: #0f1e1e;
@@ -202,5 +220,7 @@ input, textarea {
   color: #0f1e1e;
 }
 
-
+.dark .form-message {
+  color: #aef2f2;
+}
 
