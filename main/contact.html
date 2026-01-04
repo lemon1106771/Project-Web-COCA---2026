@@ -27,7 +27,7 @@
   <h2>Contact</h2>
   <p>This form is HTML only.</p>
 
-  <form action="#" method="post">
+  <form id="contactForm" action="#" method="post">
     <p>
       <label>Name:</label><br>
       <input type="text" required>
@@ -47,11 +47,29 @@
     <button type="reset">Reset</button>
   </form>
 </main>
-
 <footer>
   <hr>
   <p>© 2026 Miku Blog</p>
 </footer>
-
 </body>
 </html>
+<script>
+  /* nav current page  */
+  const navLinks = document.querySelectorAll(".navbar a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.style.backgroundColor = "#1aa6a6";
+      link.style.color = "white";
+    }
+  });
+
+  /*form submit alert*/
+  const form = document.getElementById("contactForm");
+  form.addEventListener("submit", function () {
+    alert("Thanks for your message! (This is a demo form)");
+  });
+</script>
+
+

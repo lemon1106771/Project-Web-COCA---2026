@@ -16,7 +16,7 @@
     <ul class="nav-list">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -42,11 +42,20 @@
     </figure>
   </div>
 </main>
-
 <footer>
   <hr>
   <p>© 2026 Miku Blog</p>
 </footer>
-
 </body>
 </html>
+<script>
+  const navLinks = document.querySelectorAll(".navbar a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.style.backgroundColor = "#1aa6a6";
+      link.style.color = "white";
+    }
+  });
+</script>

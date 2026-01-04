@@ -100,11 +100,20 @@
       </ul>
     </aside>
   </main>
-
   <footer>
     <hr>
     <p>© 2026 Miku Hastune</p>
   </footer>
-
 </body>
 </html>
+<script>
+  const navLinks = document.querySelectorAll(".navbar a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.style.backgroundColor = "#1aa6a6";
+      link.style.color = "white";
+    }
+  });
+</script>
